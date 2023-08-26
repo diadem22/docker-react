@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true diadem27/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "Diadem-dev"
+  env: "Diadem-dev-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-985086268407"
+  bucket_path: "Diadem-dev"
+  on:
+    branch: master
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
