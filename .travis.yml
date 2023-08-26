@@ -17,6 +17,6 @@ deploy:
   bucket_name: "elasticbeanstalk-eu-north-1-985086268407"
   bucket_path: "Diadem-dev"
   on:
-    branch: master
+    branch: main
   access_key_id: "$AWS_ACCESS_KEY"
   secret_access_key: "$AWS_SECRET_KEY"
